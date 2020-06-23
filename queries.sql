@@ -10,7 +10,7 @@ WHERE p."CategoryId" = c."Id";
 SELECT o."Id", s."CompanyName"
 FROM "Order" AS o 
 JOIN "Shipper" AS s
-WHERE o."ShipVia" = s."Id" AND o."OrderDate" < "2012-07-09";
+WHERE o."ShipVia" = s."Id" AND o."OrderDate" < "2012-08-09";
 
 -- Display the name and quantity of the products ordered in order with Id 10251. Sort by ProductName. Shows 3 records.
 SELECT p."ProductName", o."Quantity"
