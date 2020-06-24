@@ -15,16 +15,23 @@ function findSteps(id) {
         .select("*");
 }
 
-// function findPostsByID(userId, postId) {
-//     return db("posts as p")
-//         .innerJoin("users as u", "u.id", "p.user_id")
-//         .where("user_id", userId)
-//         .where("postId", postId)
-//         .first("p.id", "p.contents", "u.username");
-// }
+function add(scheme) {
+    return db("schemes").insert(scheme);
+}
+
+function update(changes, id) {
+    return db("schemes").where("id", id).update(changes);
+}
+
+function remove(id) {
+    return db("schemes").where("id", id).del();
+}
 
 module.exports = {
     find,
     findById,
     findSteps,
+    add,
+    update,
+    remove,
 };
